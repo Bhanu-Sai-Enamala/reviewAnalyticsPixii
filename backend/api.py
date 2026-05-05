@@ -16,10 +16,17 @@ from fastapi import BackgroundTasks, FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
-from backend.analyzer import analyze_reviews
-from backend.listing_generator import generate_listing
-from backend.revenue_estimator import estimate_all_products
-from backend.scraper import asin_from_url, normalize_asin, scrape_asins_resilient
+try:
+    from backend.analyzer import analyze_reviews
+    from backend.listing_generator import generate_listing
+    from backend.revenue_estimator import estimate_all_products
+    from backend.scraper import asin_from_url, normalize_asin, scrape_asins_resilient
+except ModuleNotFoundError:
+    # Supports deployments where backend/ is the service root.
+    from analyzer import analyze_reviews
+    from listing_generator import generate_listing
+    from revenue_estimator import estimate_all_products
+    from scraper import asin_from_url, normalize_asin, scrape_asins_resilient
 
 
 DB_PATH = "backend/data.db"
