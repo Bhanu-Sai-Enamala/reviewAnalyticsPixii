@@ -10,9 +10,9 @@ It is built as a practical decision dashboard: scrape data, analyze customer lan
 
 - Multi-competitor product comparison
 - BSR-based monthly revenue estimation
-- AI purchase-criteria analysis
+- AI(claude API) purchase-criteria analysis
 - Customer hook extraction (repeat phrases + sentiment)
-- AI-generated listing rewrite (title, bullets, description)
+- AI(claude API)-generated listing rewrite (title, bullets, description)
 
 ## Tech Stack
 
