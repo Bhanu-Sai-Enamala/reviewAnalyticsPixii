@@ -1,0 +1,16 @@
+{
+  "name": "review-analytics-tool",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Review analytics dashboard for Amazon sellers.",
+  "scripts": {
+    "dev": "npm run dev --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "preview": "npm run preview --prefix frontend",
+    "backend": "uvicorn backend.api:app --reload --port 8000"
+  },
+  "engines": {
+    "node": ">=20",
+    "npm": ">=10"
+  }
+}
